@@ -133,18 +133,18 @@ nav a:hover {
 
 .stars {
 
-    background: #000 url(/scr/img/stars.png) repeat top center;
+    background: #000 url(../img/stars.png) repeat top center;
     z-index: 0;
 }
 
 .twinkling {
-    background: transparent url(/scr/img/twinkling.png) repeat top center;
+    background: transparent url(../img/twinkling.png) repeat top center;
     z-index: 1;
     animation: move-twink-back 200s linear infinite;
 }
 
 .clouds {
-    background: transparent url(/scr/img/clouds.png) repeat top center;
+    background: transparent url(../img/clouds.png) repeat top center;
     z-index: 2;
     opacity: .4;
     animation: move-clouds-back 200s linear infinite;

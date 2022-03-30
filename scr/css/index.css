@@ -132,7 +132,7 @@ nav a:hover {
 
 .stars {
 
-    background: #000 url(../img/stars.png) repeat top center;
+    background: #fff url(../img/stars.png) repeat top center;
     z-index: 0;
 }
 

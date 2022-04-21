@@ -48,6 +48,24 @@ header img {
     border: 5px solid #5BBE42;
 }
 
+.contact-form input{
+    width: 100%;
+    padding: 8px 0px;
+    margin: 8px 0px;
+}
+
+.contact-form input[type=text]{
+    height: 100px;
+}
+
+button{
+    background-color: white;
+    border-radius: 10px;
+    border: none;
+    width: 100px;
+    height: 25px;
+}
+
 .center {
     text-align: center;
 }
@@ -78,7 +96,7 @@ section a {
 
 .container {
     padding: 0px 30px;
-    ;
+    text-align:left;
 }
 
 nav a:hover {

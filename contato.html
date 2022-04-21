@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 
 <head>
     <meta charset="UTF-8">
@@ -33,40 +33,55 @@
         <header>
             <div class="center">
                 <img src="scr/img/Winter.jpg">
+                <h1>Daniel Winter</h1>
+                <h2><i>Quality Assurance</i> / Desenvolvedor <i> Front-End </i>
             </div>
-            <h1>Daniel Winter</h1>
-
-            <h2><i>Quality Assurance</i> / Desenvolvedor <i> Front-End </i>
+                        
             </h2>
         </header>
 
-        <main>
-            <section>
-                <h4><i>E-mail</i> para contato:</h4>
-                <ul>
-                    <li>
-                        danielwinterifmg@gmail.com
-                    </li>
-                    <li>
-                        daniel_winter2009@yahoo.com.br
-                    </li>
-                </ul>
-            </section>
+        <body>
+            <main>
+                <section>
+                    <h4><i>E-mail</i> para contato:</h4>
+                    <ul>
+                        <li>
+                            danielwinterifmg@gmail.com
+                        </li>
+                        <li>
+                            daniel_winter2009@yahoo.com.br
+                        </li>
+                    </ul>
+                </section>
 
-            <section>
-                <h4>Telefone:</h4>
-                <ul>
-                    <li>
-                        (037) 9 9871-8809
+                <section>
+                    <h4>Telefone:</h4>
+                    <ul>
+                        <li>
+                            (037) 9 9871-8809
 
-                    </li>
+                        </li>
 
-                    <li>
-                        (037) 3431-4484
-                    </li>
-                </ul>
-            </section>
-        </main>
+                        <li>
+                            (037) 3431-4484
+                        </li>
+                    </ul>
+                </section>
+            </main>
+
+            <div class="container">
+                <form class ="contact-form" action="https://formsubmit.co/1e3310f9291f198751fca97dc4fdb50c" method="POST">
+                    <label for="email">Digite seu e-mail: </label>
+                    <input type="email" name="email" id="email" required>
+                    <label for="message">Mensagem: </label>
+                    <input type="text" name="message" id="message" required>
+                    <input type="hidden" name="_next" value="http://127.0.0.1:5500/thanks.html">
+
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+
+        </body>
 
         <footer>
             <a href="https://github.com/Winterdw" target="_blank" rel="noopener noreferrer" class="github">

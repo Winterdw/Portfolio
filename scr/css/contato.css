@@ -66,6 +66,10 @@ button{
     height: 25px;
 }
 
+.botaoEnviar{    
+    cursor: pointer;
+}
+
 .center {
     text-align: center;
 }

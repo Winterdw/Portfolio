@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daniel Winter</title>
-    <link rel="stylesheet" href="/Portfolio/scr/css/index.css">
+    <link rel="stylesheet" href="/Portfolio/scr/css/contato.css">
     <style>
         .language-selector {
             position: relative;
@@ -81,20 +81,20 @@
         <nav>
             <ul>
                 <li>
-                    <a href="/Portfolio/index.html">Sobre mim</a>
+                    <a href="/Portfolio/en/index.html">About me</a>
                 </li>
                 <li>
-                    <a href="/Portfolio/project.html">Projetos</a>
+                    <a href="/Portfolio/en/project.html">Projects</a>
                 </li>
                 <li>
-                    <a href="/Portfolio/contato.html">Contato</a>
+                    <a href="/Portfolio/en/contact.html">Contact</a>
                 </li>
                 <li>
                     <div class="language-selector">
-                        <div class="language-btn">Português</div>
+                        <div class="language-btn">English</div>
                         <div class="language-options">
-                            <div class="language-option" data-lang="en">English</div>
                             <div class="language-option" data-lang="pt">Português</div>
+                            <div class="language-option" data-lang="en">English</div>
                         </div>
                     </div>
                 </li>
@@ -114,7 +114,7 @@
         <body>
             <main>
                 <section>
-                    <h4><i>E-mail</i> para contato:</h4>
+                    <h4><i>E-mail</i> para contato: </h4>
                     <ul>
                         <li>
                             danielwinterifmg@gmail.com
@@ -130,7 +130,6 @@
                     <ul>
                         <li>
                             (37) 9 9871-8809
-
                         </li>
                     </ul>
                 </section>
@@ -204,7 +203,7 @@
                         else if (currentPath.endsWith('project.html')) {
                             window.location.href = '/Portfolio/en/project.html';
                         }
-                        else if (currentPath.endsWith('contato.html')) {
+                        else if (currentPath.endsWith('contato.html') || currentPath.endsWith('contact.html')) {
                             window.location.href = '/Portfolio/en/contact.html';
                         }
                     } else if (lang === 'pt') {

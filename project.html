@@ -267,27 +267,27 @@
                 function changeLanguage(lang) {
                     const currentPath = window.location.pathname;
                     if (lang === 'en') {
-                        if (currentPath === '/' || currentPath.endsWith('index.html')) {
-                            window.location.href = '/en/index.html';
+                        if (currentPath === '/Portfolio/' || currentPath.endsWith('index.html')) {
+                            window.location.href = '/Portfolio/en/index.html';
                         } 
                         else if (currentPath.endsWith('project.html')) {
-                            window.location.href = '/en/project.html';
+                            window.location.href = '/Portfolio/en/project.html';
                         }
                         else if (currentPath.endsWith('contato.html') || currentPath.endsWith('contact.html')) {
-                            window.location.href = '/en/contact.html';
+                            window.location.href = '/Portfolio/en/contact.html';
                         }
                     } else if (lang === 'pt') {
                         if (currentPath.endsWith('index.html')) {
-                            window.location.href = '/index.html';
+                            window.location.href = '/Portfolio/index.html';
                         } 
                         else if (currentPath.endsWith('project.html')) {
-                            window.location.href = '/project.html';
+                            window.location.href = '/Portfolio/project.html';
                         }
                         else if (currentPath.endsWith('contact.html')) {
-                            window.location.href = '/contato.html';
+                            window.location.href = '/Portfolio/contato.html';
                         }
                     }
-                }   
+                }
             });
         </script>
 

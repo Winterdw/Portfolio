@@ -8,6 +8,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daniel Winter</title>
     <link rel="stylesheet" href="./scr/css/index.css">
+    <style>
+        .language-selector {
+            position: relative;
+            display: inline-block;
+        }
+
+        .language-btn {
+            background-color: #000;
+            color: #00ff00;
+            padding: 2px 4px;
+            border: 2px solid #00ff00;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            min-width: 100px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .language-btn:hover {
+            background-color: #00ff00;
+            color: #000;
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+        }
+
+        .language-options {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 97%;
+            background-color: #000;
+            border: 2px solid #00ff00;
+            border-top: none;
+            border-radius: 0 0 4px 4px;
+            display: none;
+            overflow: hidden;
+            z-index: 1000;            
+            font-size: 14px;
+        }
+
+        .language-selector.active .language-options {
+            display: block;
+        }
+
+        .language-option {
+            padding: 2px 4px;
+            color: #00ff00;
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .language-option:hover {
+            background-color: #00ff00;
+            color: #000;
+        }
+
+        /* Animação de brilho ao hover */
+        .language-btn:hover, .language-option:hover {
+            text-shadow: 0 0 5px rgba(0, 255, 0, 0.7);
+        }
+    </style>
 </head>
 
 <body>
@@ -27,6 +89,15 @@
                 <li>
                     <a href="contato.html">Contato</a>
                 </li>
+                <li>
+                    <div class="language-selector">
+                        <div class="language-btn">Português</div>
+                        <div class="language-options">
+                            <div class="language-option" data-lang="en">English</div>
+                            <div class="language-option" data-lang="pt">Português</div>
+                        </div>
+                    </div>
+                </li>
             </ul>
         </nav>
 
@@ -45,11 +116,8 @@
             <section>
                 <h3>Sobre mim</h3>
                 <p>
-                    Realizei o curso de Bacharelado em Engenharia de Computação no qual pude abringir meus conhecimentos para 
-                    várias áreas da tecnologia pelo qual obtive uma maior interesse e afinidade nas áreas de <i>Quality Assurance</i>
-                    e desenvolvedor <i>Front-End</i> atuando durante o período de estágio. <i>Quality Assurance</i> se tornou meu principal profissão, 
-                    buscando sempre me aperfeiçoar e expandir ainda mais meus conhecimentos.
-
+                    Quality Assurance (QA) com mais de 3 anos de experiência prática em testes de software, abrangendo tanto testes automatizados quanto manuais. Ao longo da minha carreira, desenvolvi uma forte expertise em criação de casos de testes e implementação de ferramentas de automação como Cypress, aplicando metodologias ágeis e CI/CD para otimizar processos e aumentar a eficiência.
+                    Minha experiência inclui desde testes de acessibilidade conforme as diretrizes WCAG e conformidade com Section 508. testes de API, testes de regressão e testes de performance, sempre com foco na qualidade e confiabilidade dos produtos. Estou comprometido em identificar e solucionar problemas críticos antes que cheguem ao usuário final, garantindo que cada entrega supere as expectativas.
                     
                 </p>
             </section>
@@ -127,6 +195,76 @@
                 <p>Youtube</p>
             </a>
         </footer>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const languageSelector = document.querySelector('.language-selector');
+                const languageBtn = document.querySelector('.language-btn');
+                const languageOptions = document.querySelectorAll('.language-option');
+
+                // Toggle do dropdown
+                languageBtn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    languageSelector.classList.toggle('active');
+                });
+
+                // Seleção de idioma
+                languageOptions.forEach(option => {
+                    option.addEventListener('click', function() {
+                        const selectedLang = this.dataset.lang;
+                        languageBtn.textContent = this.textContent;
+                        languageSelector.classList.remove('active');
+                        // Aqui você pode adicionar a lógica para mudar o idioma
+                        changeLanguage(selectedLang);
+                    });
+                });
+
+                // Fechar dropdown ao clicar fora
+                document.addEventListener('click', function() {
+                    languageSelector.classList.remove('active');
+                });
+
+                // Definir idioma inicial baseado na URL
+                const path = window.location.pathname;
+                if (path.includes('/en/')) {
+                    languageBtn.textContent = 'English';
+                }
+
+                // Atualizar a função de troca de idioma
+                function changeLanguage(lang) {
+                    const currentPath = window.location.pathname;
+                    if (lang === 'en') {
+                        // Se estiver na página inicial
+                        if (currentPath === '/' || currentPath.endsWith('index.html')) {
+                            window.location.href = '/en/index.html';
+                        } 
+                        // Se estiver na página de projetos
+                        else if (currentPath.endsWith('project.html')) {
+                            window.location.href = '/en/project.html';
+                        }
+                        // Se estiver na página de contato
+                        else if (currentPath.endsWith('contato.html')) {
+                            window.location.href = '/en/contact.html';
+                        }
+                    } else {
+                        if (lang === 'pt') {
+                        // Se estiver na página inicial
+                        if (currentPath === '/' || currentPath.endsWith('index.html')) {
+                            window.location.href = '/index.html';
+                        } 
+                        // Se estiver na página de projetos
+                        else if (currentPath.endsWith('project.html')) {
+                            window.location.href = '/project.html';
+                        }
+                        // Se estiver na página de contato
+                        else if (currentPath.endsWith('contato.html')) {
+                            window.location.href = '/contato.html';
+                        }
+                    }
+                }
+            }
+        });
+        </script>
 
     </div>
 

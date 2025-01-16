@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/scr/img/wicon.ico">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Winter</title>
+    <link rel="stylesheet" href="/scr/css/index.css">
+    <style>
+        .language-selector {
+            position: relative;
+            display: inline-block;
+        }
+
+        .language-btn {
+            background-color: #000;
+            color: #00ff00;
+            padding: 2px 4px;
+            border: 2px solid #00ff00;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            min-width: 100px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .language-btn:hover {
+            background-color: #00ff00;
+            color: #000;
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+        }
+
+        .language-options {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 97%;
+            background-color: #000;
+            border: 2px solid #00ff00;
+            border-top: none;
+            border-radius: 0 0 4px 4px;
+            display: none;
+            overflow: hidden;
+            z-index: 1000;            
+            font-size: 14px;
+        }
+
+        .language-selector.active .language-options {
+            display: block;
+        }
+
+        .language-option {
+            padding: 2px 4px;
+            color: #00ff00;
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .language-option:hover {
+            background-color: #00ff00;
+            color: #000;
+        }
+
+        /* Animação de brilho ao hover */
+        .language-btn:hover, .language-option:hover {
+            text-shadow: 0 0 5px rgba(0, 255, 0, 0.7);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+    <div class="clouds"></div>
+
+    <div class="container">
+        <nav>
+            <ul>
+                <li>
+                    <a href="/en/index.html">About me</a>
+                </li>
+                <li>
+                    <a href="/en/project.html">Projects</a>
+                </li>
+                <li>
+                    <a href="/en/contact.html">Contact</a>
+                </li>
+                <li>
+                    <div class="language-selector">
+                        <div class="language-btn">English</div>
+                        <div class="language-options">
+                            <div class="language-option" data-lang="pt">Português</div>
+                            <div class="language-option" data-lang="en">English</div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <header>
+            <div class="center">
+                <img src="/scr/img/Winter.jpg">
+                <h1 class="winter">Daniel Winter</h1>
+
+                <h2><i>Quality Assurance</i>
+                </h2>
+            </div>
+
+        </header>
+
+        <main>
+            <section>
+                <h3>About me</h3>
+                <p>
+                    Quality Assurance (QA) with more than 3 years of practical experience in software testing, covering both automated and manual testing. Throughout my career, I have developed a strong expertise in creating test cases and implementing automation tools such as Cypress, applying agile methodologies and CI/CD to optimize processes and increase efficiency.
+                    My experience ranges from accessibility testing according to WCAG guidelines and Section 508 compliance to API testing, regression testing and performance testing, always with a focus on product quality and reliability. I am committed to identifying and solving critical problems before they reach the end user, ensuring that every delivery exceeds expectations.
+
+                    
+                </p>
+            </section>
+
+            <section>
+                <h3>Education</h3>
+                <ul>
+                    <li>
+                        MBA in Software Quality Management at Unyleya College (August 2023 / June 2024).
+                    </li>
+                    
+                    <li>
+                        Postgraduate degree in Software Testing at Unyleya College (August 2023 / May 2024).
+                    </li>
+                    
+                    <li>
+                        Bachelor's degree in Computer Engineering from the Federal Institute of Science Education and Technology of Minas Gerais - Bambuí campus (April 2016 / April 2023).
+                    </li>
+
+                    <li>
+                        High School - João Batista de Carvalho State School.
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Experience</h3>
+                <ul>
+                    <li>
+                        Quality Assurance at BUMM Solutions (Campinas - SP (September 2024))
+                    </li>
+                    <li>
+                        Quality Assurance at InEvent (New York - NY (November 2022/July 2024))
+                    </li>
+                    <li>
+                        Quality Assurance Internship at Bambuí Bioenergia S.A (Bambuí - MG (July/November 2022))
+                    </li>
+                    <li>
+                        Fullstack Developer Internship at RodoSafra (Campo Belo - MG (April/May 2022))
+                    </li>
+                    <li>
+                        PIBITI Scholar (2021) on the SegBee project
+                    </li>
+                    <li>
+                        Organization of SETC (Technology Engineering and Computing Week) at IFMG in 2019 and 2020.
+                    </li>
+                    <li>
+                        Quality Assurance in the development project of a system for a local business.
+                    </li>
+                </ul>
+            </section>
+
+        </main>
+
+        <footer>
+            <a href="https://github.com/Winterdw" target="_blank" rel="noopener noreferrer" class="github">
+                <img src="/scr/img/github.svg">
+                <p>GitHub</p>
+            </a>
+
+            <a href="https://www.linkedin.com/in/winterdsr/" target="_blank" rel="noopener noreferrer" class="linkedin">
+                <img src="/scr/img/linkedin.svg">
+                <p>Linkedin</p>
+            </a>
+
+            <a href="https://www.instagram.com/winter_ds/" target="_blank" rel="noopener noreferrer" class="instagram">
+                <img src="/scr/img/instagram.svg">
+                <p>Instagram</p>
+            </a>
+
+            <a href="https://www.youtube.com/channel/UCEOsM6iSdnjUlj12ngrbmDA" target="_blank" rel="noopener noreferrer"
+                class="youtube">
+                <img src="/scr/img/youtube.svg">
+                <p>Youtube</p>
+            </a>
+        </footer>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const languageSelector = document.querySelector('.language-selector');
+                const languageBtn = document.querySelector('.language-btn');
+                const languageOptions = document.querySelectorAll('.language-option');
+
+                // Toggle do dropdown
+                languageBtn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    languageSelector.classList.toggle('active');
+                });
+
+                // Seleção de idioma
+                languageOptions.forEach(option => {
+                    option.addEventListener('click', function() {
+                        const selectedLang = this.dataset.lang;
+                        languageBtn.textContent = this.textContent;
+                        languageSelector.classList.remove('active');
+                        // Aqui você pode adicionar a lógica para mudar o idioma
+                        changeLanguage(selectedLang);
+                    });
+                });
+
+                // Fechar dropdown ao clicar fora
+                document.addEventListener('click', function() {
+                    languageSelector.classList.remove('active');
+                });
+
+                // Definir idioma inicial baseado na URL
+                const path = window.location.pathname;
+                if (path.includes('/en/')) {
+                    languageBtn.textContent = 'English';
+                }
+
+                // Atualizar a função de troca de idioma
+                function changeLanguage(lang) {
+                    const currentPath = window.location.pathname;
+                    if (lang === 'en') {
+                        if (currentPath === '/' || currentPath.endsWith('index.html')) {
+                            window.location.href = '/en/index.html';
+                        } 
+                        else if (currentPath.endsWith('project.html')) {
+                            window.location.href = '/en/project.html';
+                        }
+                        else if (currentPath.endsWith('contato.html') || currentPath.endsWith('contact.html')) {
+                            window.location.href = '/en/contact.html';
+                        }
+                    } else if (lang === 'pt') {
+                        if (currentPath.endsWith('index.html')) {
+                            window.location.href = '/index.html';
+                        } 
+                        else if (currentPath.endsWith('project.html')) {
+                            window.location.href = '/projeto.html';
+                        }
+                        else if (currentPath.endsWith('contact.html')) {
+                            window.location.href = '/contato.html';
+                        }
+                    }
+                }
+            });
+        </script>
+
+    </div>
+
+</body>
+
+</html>
